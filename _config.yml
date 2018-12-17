@@ -104,9 +104,9 @@ analytics:
 # Site Author
 author:
   name             : "Woong Seok Kang"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : ""
-  location         : "Seoul, South Korea"
+  avatar           : "https://avatars2.githubusercontent.com/u/13582777?s=460&v=4"
+  bio              : "Pursuit an elegant engineering"
+  location         : "Korea"
   email            : "zephtys123@gmail.com"
   links:
     - label: "GitHub"
