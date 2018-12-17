@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Nephtyw'S Programming Stash"
 title_separator          : "-"
 name                     : "NephtywS"
-description              : ""
+description              : "Related with computer science and programming things"
 url                      : "https://nephtyws.github.io"
 baseurl                  : ""
 repository               : "nepthyws/nephtyws.github.io"
@@ -260,6 +260,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
