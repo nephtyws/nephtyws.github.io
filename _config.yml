@@ -109,12 +109,6 @@ author:
   location         : "Seoul, South Korea"
   email            : "zephtys123@gmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: mailto:zephtys123@gmail.com
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://nephtyws.github.io"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: https://github.com/nephtyws
