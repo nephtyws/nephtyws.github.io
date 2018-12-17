@@ -10,20 +10,20 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-theme                    : "minimal-mistakes-jekyll"
-# remote_theme             : "mmistakes/minimal-mistakes"
+# theme                  : "minimal-mistakes-jekyll"
+remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
 title                    : "Nephtyw'S Programming Stash"
 title_separator          : "-"
-name                     : "Your Name"
+name                     : "NephtywS"
 description              : ""
 url                      : "https://nephtyws.github.io"
 baseurl                  : ""
-repository               : "nephtyws/nephtyws.github.io
-teaser                   : ""
+repository               : "nepthyws/nephtyws.github.io"
+teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -36,9 +36,9 @@ comments:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
     num_posts            : # 5 (default)
-    colorscheme          : # "dark" (default), "dark"
+    colorscheme          : # "light" (default), "dark"
   utterances:
-    theme                : # "github-dark" (default), "github-dark"
+    theme                : # "github-light" (default), "github-dark"
 staticman:
   allowedFields          : # ['name', 'email', 'url', 'message']
   branch                 : # "master"
@@ -103,18 +103,29 @@ analytics:
 
 # Site Author
 author:
-  name             : "Woongseok Kang"
+  name             : "Woong Seok Kang"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "May love computer"
-  location         : "South Korea"
+  bio              : ""
+  location         : "Seoul, South Korea"
   email            : "zephtys123@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:zephtys123@email.com
+      url: mailto:zephtys123@gmail.com
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://nephtyws.github.io"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: https://github.com/nephtyws
 
 # Site Footer
 footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: https://github.com/nephtyws
+
 
 # Reading Files
 include:
