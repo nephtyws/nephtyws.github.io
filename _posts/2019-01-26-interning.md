@@ -5,7 +5,8 @@ categories: Python
 ---
 
 ### References
-> 제가 글을 쓰면서 참고했던 글입니다. 참조된 글과 다르게, 제가 작성한 본문은 Python 3.7 기준으로 설명되어 있습니다.
+> 제가 글을 쓰면서 참고했던 글입니다. 참조된 글과 다르게, 이 글은 Python 3.7 기준으로 설명되어 있습니다.  
+> 또한, 파이썬에서 꼭 상수만 interning 하는 것은 아닙니다. 웬만한 object에 대해서는 interning을 적용하고 있습니다. (숫자와 문자열도 object 이고요)
 > - [guilload.com: The internals of Python string interning](http://guilload.com/python-string-interning/)
 > - [Stack Overflow: About the changing id of an immutable string](https://stackoverflow.com/questions/24245324/about-the-changing-id-of-an-immutable-string)  
 
@@ -220,7 +221,7 @@ False
 ## 파이썬 최신 버전의 버그 발견
 최초의 버그 발견이었다면 좋았겠지만, [Python bug tracker](https://bugs.python.org/)를 찾아 들어가보니 제가 발견한 내용에 대해 이미 2018년 7월에 버그 제보가 완료된 상태이고, 11월에 PR 또한 merge되어 파이썬 3.8에 릴리즈될 예정이라고 합니다. `파이썬같은 거대한 프로젝트에 첫 issue와 더불어 어쩌면 PR까지?` 라는 꿈에 부풀어 버선발로 달려가보았는데, 역시 사용자가 많은 파이썬답게 출시 1개월만에 버그가 제보되었네요. [여기](https://bugs.python.org/issue34100)서 자세한 내용을 확인하실 수 있습니다.
 
-그리고 이러한 버그 덕에, intern을 heavy하게 사용하고 있는 프로그램에서는 급격한 성능 저하가 발생할 수 있는데요. 특히 corpus를 만드는 작업처럼 중복된 문자열이 대규모로 들어오는 경우에 intern을 이용하여 상당한 공간과 시간을 절약할 수 있지만, 그러한 프로그램을 사용하고 계시다면 파이썬 3.7은 건너뛰시고 3.8로 바로 넘어가셔야 하겠네요. 한 눈에 들어오는 성능 비교를 위해, interned string과 non-interned string의 비교 벤치마크를 아래와 같이 첨부하겠습니다.
+그리고 이러한 버그 덕에, intern을 heavy하게 사용하고 있는 프로그램에서는 급격한 성능 저하가 발생할 수 있는데요. 특히 `corpus`를 만드는 작업처럼 중복된 문자열이 대규모로 들어오는 경우에 intern을 이용하여 상당한 공간과 시간을 절약할 수 있지만, 그러한 프로그램을 사용하고 계시다면 파이썬 3.7은 건너뛰시고 3.8로 바로 넘어가셔야 하겠네요. 한 눈에 들어오는 성능 비교를 위해, `interned string`과 `non-interned string`의 비교 벤치마크를 아래와 같이 첨부하겠습니다.
 ![interned-vs-non-interned](http://guilload.com/assets/media/python-string-interning/qux.png)
 > O(1) vs O(N)의 싸움입니다. `단순 포인터 비교 vs byte 비교를 length만큼`
 
