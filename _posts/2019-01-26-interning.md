@@ -1,5 +1,5 @@
 ---
-title: "파이썬의 효과적인 상수 재활용 방법 - interning"
+title: "파이썬의 효과적인 상수 재활용 방법 - Interning"
 date: 2019-01-26 15:45 +0900
 categories: Python
 ---
