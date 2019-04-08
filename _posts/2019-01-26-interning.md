@@ -61,7 +61,7 @@ intern_string_constants(PyObject *tuple)
                 PyErr_Clear();
                 continue;
             }
-            if (all_name_chars(v)) // all_name_chars: true iff s matches [a-zA-Z0-9_]{
+            if (all_name_chars(v)) { // all_name_chars: true iff s matches [a-zA-Z0-9_]
                 PyObject *w = v;
                 PyUnicode_InternInPlace(&v);
                 if (w != v) {
@@ -70,6 +70,7 @@ intern_string_constants(PyObject *tuple)
                 }
             }
         }
+}
 ```
 `all_name_chars`의 조건에 맞는 char라면 재활용할 수 있도록 하는 코드가 내부적으로 들어있군요. 벌써 정답에 근접한 것 같은 느낌이 드는데요? 역시 모든 답은 코드에 있었습니다.
 
