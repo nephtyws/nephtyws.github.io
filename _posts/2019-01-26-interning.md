@@ -11,7 +11,7 @@ categories: Python
 > - [Stack Overflow: About the changing id of an immutable string](https://stackoverflow.com/questions/24245324/about-the-changing-id-of-an-immutable-string)  
 
 며칠 전 회사 Slack에 이런 질문이 올라왔습니다. 
-> Python 3.7에서만 id가 다르네요. 원인이 뭘까요? 일반적이 문자열은 정상적으로 True가 나오지만 `!`가 있으면 결과가 달라지네요.
+> Python 3.7에서만 id가 다르네요. 원인이 뭘까요? 일반적인 문자열은 정상적으로 True가 나오지만 `!`가 있으면 결과가 달라지네요.
 ```python
 >>> a, b = "python!", "python!"
 >>> a is b
