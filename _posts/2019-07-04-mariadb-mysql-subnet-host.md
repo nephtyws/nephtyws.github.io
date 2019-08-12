@@ -1,5 +1,5 @@
 ---
-title: "MySQL/MariaDB에서 유저에게 여러 호스트를 부여하는 방법"
+title: "MySQL/MariaDB에서 유저에게 Multiple host를 부여하는 방법"
 date: 2019-07-04 21:15 +0900
 categories: Database
 ---
