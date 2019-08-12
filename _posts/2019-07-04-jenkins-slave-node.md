@@ -36,4 +36,4 @@ categories: DevOps
 - `Server rejected the 1 private key(s) for jenkins` 라거나, `Public key - permission denied` 같은 에러는 진짜 권한이 부족하거나 private key가 달라서 생기는 에러일수도 있지만, 경험상 특정 설정이 이상해서 뜨는 메시지였습니다.
   - 특히 `.ssh` 폴더와 내용물의 권한, Jenkins slave node 설정에서 credential 설정 등...
 
-그럼 Jenkins와 함께 행복한 `CI` 되시길 기원하겠습니다!
+그럼 Jenkins와 함께 행복한 `CI/CD` 되시길 기원하겠습니다!
