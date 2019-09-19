@@ -57,15 +57,15 @@ Scala의 가장 큰 장점 중 하나는 바로 `case class` 라고 생각합니
 Spark 2.x 버전을 기준으로, Spark는 두 가지 형태의 serializer를 지원하는데요. 기본값으로 설정되어 있는 `Java serializer`와 성능이 월등히 개선된 `Kyro serializer`가 그 주인공입니다.
 어떤 이유에선지 `Kyro`가 성능이 훨씬 좋음에도 불구하고 기본 serializer로 설정되어 있지 않아, 사용자가 다음 설정을 통해 `Kyro`를 사용하도록 만들어줘야 합니다.
 
-> `spark-defaults.conf` (혹은 app 내에서 conf 객체를 이용해 설정해줘도 됩니다)
-> spark.serializer org.apache.spark.serializer.KryoSerializer
+> `spark-defaults.conf` (혹은 app 내에서 conf 객체를 이용해 설정해줘도 됩니다)  
+> spark.serializer "org.apache.spark.serializer.KryoSerializer"
 
 Spark 2.x에서는 명시적으로 설정해주지 않아도 몇 가지 기본적인 연산 (`shuffling with primitive types`) 등에 대해서는 자동으로 `Kyro`를 사용하고 있습니다. 그래도 모든 연산에 적용될 수 있도록 설정해주는 편이 훨씬 좋겠죠?
-참고로, `Kyro`로 `SerDe`가 실패할 경우에는 자동으로 `Java serializer`로 fallback 되니, 안심하고 사용하셔도 됩니다. 벤치마크에 따르면, `Kyro`가 기존 `Java serializer`보다 약 10배 빠르다고 합니다.
+참고로, `Kyro`로 `SerDe`를 수행하다 실패하는 경우에는 자동으로 `Java serializer`로 fallback 되니, 안심하고 사용하셔도 됩니다. 벤치마크에 따르면, `Kyro`가 기존 `Java serializer`보다 약 10배 빠르다고 합니다.
 
 ### 4. High-level API 사용하기
-Spark 2.x 부터는 Dataset API를 사용하는 것이 권장됩니다. 물론 Dataset도 내부 뼈대는 여전히 RDD지만, 다양한 최적화 (`Catalyst optimization` 등) 기법을 포함하고 있습니다.
-예를 들어, 시간이 많이 걸리는 `join` 연산을 수행할 때 High-level API를 사용하면 가능한 경우에 자동으로 `Broadcast join` 등으로 바꿔 `shuffle`이 일어나지 않게 해주는 등의 최적화가 이루어집니다.
+Spark 2.x 부터는 Dataset API를 사용하는 것이 권장됩니다. 물론 Dataset도 내부 뼈대는 여전히 RDD지만, 다양한 최적화 (`Catalyst optimization` 등) 기법과 훨씬 더 강력한 인터페이스를 포함하고 있습니다.
+예를 들어, 시간이 많이 걸리는 `join` 연산을 수행할 때 High-level API를 사용하면 가능한 경우에 자동으로 `Broadcast join` 등으로 바꿔 `shuffle`이 일어나지 않게 해주는 최적화가 이루어집니다.
 그래서 가급적이면 저도 무조건 Dataset이나 Dataframe을 이용해서 Spark 코드를 짜려고 노력하고 있습니다.
 
 ### 5. Closure serialization
@@ -75,7 +75,7 @@ val factor = config.multiplicationFactor
 rdd.map(_ * factor)
 ```
 
-`config`로 부터 특정 상수값을 뽑아서 map에 넘겨주고 있습니다. 이 코드를 실행하면, 우리의 의도와는 다르게 `config` 객체 전부가 `SerDe` 되어 온 node를 돌아다니게 됩니다. object가 크면 클수록 손해를 보게 되겠죠?
+`config`로 부터 특정 상수값을 뽑아서 map에 넘겨주고 있습니다. 이 코드를 실행하면, 우리의 의도와는 다르게 `config` 객체 전부가 `SerDe` 되어 온 node를 돌아다니게 됩니다. 이런 경우에는 object가 크면 클수록 손해를 보게 되겠죠?
 내가 원하는 특정 값만 각 node들이 가지게 해주고 싶다면, `Broadcast variable`을 이용하면 됩니다.
 
 ```scala
@@ -85,4 +85,4 @@ rdd.map(_ * broadcastedFactor)
 
 이렇게 하면, 모든 node들이 broadcast된 상수값을 가지고 있을 수 있어 불필요한 `SerDe`가 일어나지 않고 최적의 연산을 수행하게 됩니다.
 
-다음 `Part 2`에서는 코드 바깥에서 Spark를 최적화할 수 있는 방법들을 알아보겠습니다. (Spark parameter tuning, 최적의 cluster 크기/개수 선택 등)
+다음 `Part 2`에서는 코드 바깥에서 Spark를 최적화할 수 있는 방법들을 알아보겠습니다. (Spark parameter tuning, 최적의 cluster 크기/개수 선택 방법, AWS EMR 환경에서 Spark 최적화 하는 방법 등)
