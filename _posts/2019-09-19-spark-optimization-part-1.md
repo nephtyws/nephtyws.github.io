@@ -57,7 +57,6 @@ Scala의 가장 큰 장점 중 하나는 바로 `case class` 라고 생각합니
 Spark 2.x 버전을 기준으로, Spark는 두 가지 형태의 serializer를 지원하는데요. 기본값으로 설정되어 있는 `Java serializer`와 성능이 월등히 개선된 `Kyro serializer`가 그 주인공입니다.
 어떤 이유에선지 `Kyro`가 성능이 훨씬 좋음에도 불구하고 기본 serializer로 설정되어 있지 않아, 사용자가 다음 설정을 통해 `Kyro`를 사용하도록 만들어줘야 합니다.
 
-> `spark-defaults.conf` (혹은 app 내에서 conf 객체를 이용해 설정해줘도 됩니다)  
 > spark.serializer "org.apache.spark.serializer.KryoSerializer"
 
 Spark 2.x에서는 명시적으로 설정해주지 않아도 몇 가지 기본적인 연산 (`shuffling with primitive types`) 등에 대해서는 자동으로 `Kyro`를 사용하고 있습니다. 그래도 모든 연산에 적용될 수 있도록 설정해주는 편이 훨씬 좋겠죠?
