@@ -4,7 +4,7 @@ date: 2019-05-20 23:03 +0900
 categories: Database
 ---
 
-최근에 회사 데이터 플랫폼 을 On-premise Hadoop 환경에서 Managed 환경 ([AWS EMR](https://aws.amazon.com/ko/emr/)) 으로 모조리 이전했습니다. 
+최근에 회사 데이터 플랫폼을 On-premise Hadoop 환경에서 Managed 환경 ([AWS EMR](https://aws.amazon.com/ko/emr/)) 으로 모조리 이전했습니다. 
 예전에는 Azure 위에서 VM을 계속 띄워놓고 그 위에 Cloudera Hadoop을 설치하는 형태로 사용했었는데요. 이 배포판에 같이 딸려오는 Hue와 Impala를 이용해 데이터 분석가분들께 플레이그라운드 (?) 를 제공해드렸었는데, EMR로 넘어오면서부터는 필요할 때만 클러스터를 올려 쓰는 형태로 변경되었기 때문에 더 이상 Hue와 같은 대시보드를 계속해서 제공할 수 없게 되었습니다.  
 
 이에 대한 대안으로 [AWS Athena](https://aws.amazon.com/ko/athena/)를 도입하여 HDFS (사실은 S3) 에 있는 테이블들을 이전과 같이 SQL-like 인터페이스를 이용하여 조회할 수 있도록 제공하기로 했습니다. 그러나 항상 쿼리를 날리기 위해 Athena console에 접속할 수는 없는 노릇이지요! (또한 Athena web console은 정말 후집니다. ㅠㅠ) 좋은 도구에는 좋은 클라이언트가 필수인 법입니다. Athena를 이용하기 위해 어떤 클라이언트를 쓰면 좋을까 고민하던 와중 회사의 분석가분께서 추천해주신 클라이언트가 있는데 그것이 바로 [DBeaver](https://dbeaver.io/) 입니다.  
