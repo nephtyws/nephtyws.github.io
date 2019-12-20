@@ -14,7 +14,7 @@ ECS에 Airflow를 설정하던 도중 다음과 같은 오류 메시지를 만�
 
 참고로, gunicorn worker 수는 `airflow.cfg`의 다음 섹션에서 찾으실 수 있습니다.
 
-```editorconfig
+```ini
 [webserver]
 # Number of workers to run the Gunicorn web server
 workers = n
