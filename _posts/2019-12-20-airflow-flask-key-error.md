@@ -28,7 +28,7 @@ secrets.token_urlsafe(16)
 Fernet key는 44 byte 정도 되는데, 통상적으로 사용하는 Flask session secret key의 길이는 16-24 byte 정도 되는 것을
 확인할 수 있었습니다. 위처럼 secret key를 만들어주고 그 값을 사용하였더니 문제가 바로 해결되었습니다.
  
-#### 결론
+## 결론
 - Flask session secret key의 값이 너무 길거나, urlsafe 하지 않으면 값이 제대로 설정되어 있어도 Flask에서 key를 제대로
 불러오지 못할 수도 있다.
 - `secrets.token_urlsafe` 함수를 이용해 key를 만들어 쓰면 좋다. (단, Python 3.6 이상부터 지원) 그 이하 버전에서는 다음과 같이

@@ -13,6 +13,6 @@ Spark job에서 필요에 의해 작업 진행 상황을 봐야하는 경우 보
 
 log를 제대로 출력하려면 각 언어에서 제공하는 `logger class`를 사용하면 되는데요. Scala의 경우에는 `log4j`를 이용하면 됩니다.
 
-#### 결론
+## 결론
 - `log4j` 와 같은 logger class를 이용하면 Livy로 job을 제출했을 때도 정상적으로 stdout log를 확인할 수 있다.
 - [참고할만한 Stack Overflow 링크](https://stackoverflow.com/questions/59650722/read-spark-stdout-from-driverlogurl-through-livy-batch-api/)

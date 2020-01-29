@@ -36,6 +36,6 @@ session.close()
 특히, `superuser = True` 를 하지 않으면 관리자 권한이 없는 일반 계정이 만들어져서 웹 서버에서 Airflow를 관리하는 데 있어
 상당한 제약이 있습니다. 관리자 계정을 만들고 싶으시면 꼭 저 값을 `True`로 변경해주세요. 기본값은 False 입니다.
 
-#### 결론
+## 결론
 - `superuser = True`를 통해 관리자 계정을 생성할 수 있다.
 - `airflow.cfg`에서 `authenticate = False`로 설정해주었다면, 기본적으로 모두가 관리자 권한을 갖게 된다.

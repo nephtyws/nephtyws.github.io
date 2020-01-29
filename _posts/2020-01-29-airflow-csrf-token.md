@@ -26,5 +26,5 @@ cookie_samesite = Lax to None
 이내 정상으로 돌아온 Airflow를 확인할 수 있었습니다. 그리고 다시 설정을 원래대로 복구했는데 (`True`, `Lax` 로) 아무 문제 없이 잘 되는 것을
 확인하였습니다!
 
-#### 결론
+## 결론
 - `cookie_secure`, `cookie_samesite` 설정을 좀 더 약하게 조절하고 서비스를 재배포해보자.

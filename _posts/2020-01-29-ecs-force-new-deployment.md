@@ -6,7 +6,7 @@ categories: DevOps
 
 ECS에 배포된 서비스를 재배포하고 싶을 때는 보통 다음과 같은 명령어를 이용합니다.
 
-```shell script
+```shell
 aws --profile "${AWS_PROFILE}" ecs update-service --cluster "${CLUSTER}" --service "${SERVICE}" --force-new-deployment --region "${AWS_REGION}"
 ```
 
@@ -18,6 +18,6 @@ aws --profile "${AWS_PROFILE}" ecs update-service --cluster "${CLUSTER}" --servi
 즉, task가 요구하는 최소 health가 100이니 재배포가 될 수 없었던 것입니다. 생각해 보면, 재배포가 이루어질 때는 기존 서비스가 내려가고 다시 올라와야 하는데,
 그러면 `0 -> 100`이 되어야 합니다. 이를 해결하기 위해서는 `Minimum healthy percent`를 `0`으로 설정해주면 됩니다.
 
-#### 결론
+## 결론
 - `Minimum healthy percent`를 `0`으로 맞춰보자.
 - [참고할만한 Stack Overflow 링크](https://stackoverflow.com/questions/46018883/best-practice-for-updating-aws-ecs-service-tasks)
