@@ -31,16 +31,16 @@ Airflow에서 execution_date는 단순히 해당 TI (task instance) 의 시작�
 Luigi였다면 그냥 `TestJob-20200402` 처럼 `yyyymmdd` 형태의 marker를 조회하면 쉽게 dependency check를 할 수 있었을 겁니다. 혹은 이게 못미덥다면, `yyyymmddHHMMSS` 단위로 해당 job의 marker를 조회하면 됩니다. 그런데, Airflow에서 dependency check를 하려면 다음과 같이 해야합니다.
 
 ```python
-        dag_time: Time = dag['schedule_time']
-        dag_timedelta = timedelta(hours=dag_time.hours, minutes=dag_time.minutes)
-        my_time = timedelta(hours=watcher_time.hours, minutes=watcher_time.minutes)
+    dag_time: Time = dag['schedule_time']
+    dag_timedelta = timedelta(hours=dag_time.hours, minutes=dag_time.minutes)
+    my_time = timedelta(hours=watcher_time.hours, minutes=watcher_time.minutes)
 
-        yield ExternalTaskSensor(
-            task_id=f"waiting_{dag['name']}",
-            external_dag_id=dag['name'],
-            execution_delta=my_time - dag_timedelta,
-            timeout=600,
-        )
+    yield ExternalTaskSensor(
+        task_id=f"waiting_{dag['name']}",
+        external_dag_id=dag['name'],
+        execution_delta=my_time - dag_timedelta,
+        timeout=600,
+    )
 ```
 
 즉, 내가 check하고 싶은 DAG의 time을 가져와서 그것의 delta를 직접 계산한 후에 Sensor에 넣어줘야 합니다. 물론 이렇게 하면 대부분의 경우를 cover 할 수 있긴 한데, execution_date의 개념을 제대로 알지 못하면 헷갈릴 수도 있습니다.
