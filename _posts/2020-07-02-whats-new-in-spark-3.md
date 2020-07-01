@@ -1,5 +1,5 @@
 ---
-title: "Spark 3.0에 새로 추가된 기능 소개 및 설명)"
+title: "Spark 3.0에 새로 추가된 기능 소개 및 설명"
 date: 2020-07-02 00:30 +0900
 categories: Data
 ---
