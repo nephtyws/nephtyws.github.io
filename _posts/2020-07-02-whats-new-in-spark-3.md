@@ -2,6 +2,7 @@
 title: "Spark 3.0에 새로 추가된 기능 소개 및 설명"
 date: 2020-07-02 00:30 +0900
 categories: Data
+toc: true
 ---
 
 [Spark 3.0.0](https://spark.apache.org/releases/spark-release-3-0-0.html)이 6월 18일에 출시되었습니다. 정말 오랜만의 major update인 만큼 다양한 feature들이 Spark에 추가되었는데요.

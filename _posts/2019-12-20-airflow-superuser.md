@@ -2,6 +2,7 @@
 title: "Airflow에서 superuser 만드는 법"
 date: 2019-12-20 19:30 +0900
 categories: Data
+toc: true
 ---
 
 Airflow에서 다음과 같은 설정값을 통해 간단한 계정 기반 인증 시스템을 구현할 수 있습니다.

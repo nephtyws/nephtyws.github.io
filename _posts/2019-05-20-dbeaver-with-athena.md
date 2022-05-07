@@ -2,6 +2,7 @@
 title: "AWS Athena와 잘 어울리는 DB 클라이언트 - DBeaver"
 date: 2019-05-20 23:03 +0900
 categories: Database
+toc: true
 ---
 
 최근에 회사 데이터 플랫폼을 On-premise Hadoop 환경에서 Managed 환경 ([AWS EMR](https://aws.amazon.com/ko/emr/)) 으로 모조리 이전했습니다. 

@@ -2,6 +2,7 @@
 title: "Facebook Hacker Cup 2019 Online Qualification Round"
 date: 2019-06-19 10:37 +0900
 categories: Algorithm
+toc: true
 ---
 
 지난 주 토요일 (06/15) 부터 이번 주 화요일 (06/18) 까지, 72시간 동안 [Facebook Hacker Cup 2019](https://www.facebook.com/hackercup/?ref=br_rs)의 [Qualification Round](https://www.facebook.com/hackercup/round/1015632918646326/)가 진행되었습니다. `토요일부터 당장 풀어봐야지~` 라는 안일한 생각을 갖고 있다가 주말을 귀신처럼 흘려보낸 후 월요일 퇴근하고 부랴부랴 풀기 시작했습니다. 예선은 딱 한 문제만 온전히 풀어도 다음 라운드로 진출하는 방식인데요. 비슷한 대회인 [Google Code Jam](https://codingcompetitions.withgoogle.com/codejam) 과 유사한 방식을 채택하고 있습니다.  

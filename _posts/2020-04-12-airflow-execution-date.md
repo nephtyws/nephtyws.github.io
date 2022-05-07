@@ -2,6 +2,7 @@
 title: "Airflow의 execution_date에 대하여"
 date: 2020-04-12 17:20 +0900
 categories: Data
+toc: true
 ---
 
 [Airflow](https://airflow.apache.org/)는 Airbnb에서 시작된 Job orchestration framework로 데이터 엔지니어링 사이드에서 꽤나 많이 사용하는 도구 중 하나입니다. 저도 현업에서 production용으로 이미 사용하고 있고, 20+ DAGs, 200+ tasks를 매일매일 돌리고 있습니다. 이와 비슷한 도구로는 Spotify에서 만든 [Luigi](https://github.com/spotify/luigi)가 있습니다. 슈퍼 마리오에서 배관을 타고 들어가는 Luigi 캐릭터를 보고 지은 이름인 듯 합니다.

@@ -2,6 +2,7 @@
 title: "Apache Livy에서 Spark job stdout log를 보는 법"
 date: 2020-01-29 19:30 +0900
 categories: Data
+toc: true
 ---
 
 저는 Spark cluster에 job을 제출할 때 [Apache Livy](https://livy.incubator.apache.org/)라는 프레임워크를 사용합니다. Livy는 RESTful API를 이용하여

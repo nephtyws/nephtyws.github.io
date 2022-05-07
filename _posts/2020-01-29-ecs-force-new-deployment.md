@@ -2,6 +2,7 @@
 title: "AWS ECS에서 force-new-deployment가 제대로 되지 않을 때"
 date: 2020-01-29 19:50 +0900
 categories: DevOps
+toc: true
 ---
 
 ECS에 배포된 서비스를 재배포하고 싶을 때는 보통 다음과 같은 명령어를 이용합니다.

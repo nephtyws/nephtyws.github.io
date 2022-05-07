@@ -2,6 +2,7 @@
 title: "MySQL/MariaDB에서 유저에게 multiple host를 부여하는 방법"
 date: 2019-07-04 21:15 +0900
 categories: Database
+toc: true
 ---
 
 ### 1. Subnet mask 이용하기

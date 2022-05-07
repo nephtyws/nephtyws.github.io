@@ -2,6 +2,7 @@
 title: "AWSKRUG Data Science 12월 발표 - Let the Airflow in AWS"
 date: 2020-12-03 21:35 +0900
 categories: Data
+toc: true
 ---
 
 또 한차례 우연한 기회로 AWSKRUG 소모임에서 발표를 하게 되었습니다. 마침 AWS Managed Airflow가 나온 시점이어서 Airflow를 주제로 발표를 하게 되었는데요.

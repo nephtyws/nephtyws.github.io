@@ -2,6 +2,7 @@
 title: "Scala의 예외 처리 - Option, Either, Try"
 date: 2020-04-12 18:10 +0900
 categories: Programming
+toc: true
 ---
 
 Scala에서는 JVM 기반 언어 최대의 적인 `NPE (NullPointerException)`를 functional하게 handling 할 수 있는 다양한 수단을 제공하고 있습니다. Scala의 exception handling 3인방인 `Option, Either, Try` 에 대해 알아보도록 하겠습니다!

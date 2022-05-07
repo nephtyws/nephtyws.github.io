@@ -2,6 +2,7 @@
 title: "Jenkins slave node 구성하기 - Troubleshooting 포함"
 date: 2019-07-04 20:37 +0900
 categories: DevOps
+toc: true
 ---
 
 최근에 회사에서 [Jenkins](https://jenkins.io/)를 활발히 쓸 기회가 생겼습니다. 목적은 AWS에 배포된 EC2를 Slave node로 등록해서 배포를 자동화하려는 것이었는데요. 의외로 한 번에 설정하기가 쉽지 않더라고요. 예상치 못한 문제도 발생했고요.  
