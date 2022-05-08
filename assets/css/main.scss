@@ -1,21 +1,25 @@
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'air' }}";
+@import "minimal-mistakes/skins/default";
 @import "minimal-mistakes";
 
+.page__content {
+	font-size: 18px;
+}
+
 html {
-	font-size: 14px;
+	font-size: 18px;
 
 	@include breakpoint($medium) {
-		font-size: 14px;
+		font-size: 18px;
 	}
 
 	@include breakpoint($large) {
-		font-size: 14px;
+		font-size: 18px;
 	}
 
 	@include breakpoint($x-large) {
-		font-size: 14px;
+		font-size: 18px;
 	}
 }
 
