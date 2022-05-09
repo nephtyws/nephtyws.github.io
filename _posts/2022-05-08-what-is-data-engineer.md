@@ -15,9 +15,13 @@ toc: true
 
 설명하기에 앞서 먼저 데이터 엔지니어를 채용하고 있는 스타트업들의 채용 공고문을 한 번 살펴보겠습니다.
 ![쏘카 데이터 엔지니어 채용 공고](https://user-images.githubusercontent.com/13582777/167293371-ba37fd8d-5182-4a2d-93b8-63f508515384.png)
+*쏘카 데이터 엔지니어 채용 공고*
 ![몰로코 데이터 엔지니어 채용 공고](https://user-images.githubusercontent.com/13582777/167293471-4644d793-4412-47d1-bcd7-1fcff456e4d3.png)
+*몰로코 데이터 엔지니어 채용 공고*
 ![토스증권 데이터 엔지니어 채용 공고](https://user-images.githubusercontent.com/13582777/167293515-74ed8ea2-15a7-4e59-b139-564a66fc7691.png)
+*토스증권 데이터 엔지니어 채용 공고*
 ![카카오스타일 데이터 엔지니어 채용 공고](https://user-images.githubusercontent.com/13582777/167293562-f514673d-a842-4e2d-98df-49efcb3533c8.png)
+*카카오스타일 데이터 엔지니어 채용 공고*
 
 채용 공고만 보고 감이 오시나요? 공통적으로 등장하는 항목들을 조금 정리해보면,
 - 서비스의 다양한 곳에서 발생하는 정형/비정형 데이터를 수집하기 위한 배치/실시간 파이프라인 구축 및 운영
@@ -87,10 +91,15 @@ toc: true
 
 ### 데이터 엔지니어 in 대기업
 ![네이버 클라우드 빅데이터 플랫폼 분석 엔지니어 채용 공고](https://user-images.githubusercontent.com/13582777/167394656-d51f9575-0080-42c0-b67e-4fc6b03cf1c7.png)
-![네이버 클로바 `머신러닝을 위한 대규모 데이터 플랫폼 구축` 채용 공고](https://user-images.githubusercontent.com/13582777/167394816-264af751-951e-4373-aa71-f90067b48a43.png)
+*네이버 클라우드 빅데이터 플랫폼 분석 엔지니어 채용 공고*
+![네이버 CLOVA AI `머신러닝을 위한 대규모 데이터 플랫폼 구축` 채용 공고](https://user-images.githubusercontent.com/13582777/167394816-264af751-951e-4373-aa71-f90067b48a43.png)
+*네이버 CLOVA AI `머신러닝을 위한 대규모 데이터 플랫폼 구축` 채용 공고*
 ![카카오 데이터실 데이터 엔지니어 채용 공고](https://user-images.githubusercontent.com/13582777/167396460-b644c6ab-ac7e-4eaa-9e8a-f16abbe113eb.png)
+*카카오 데이터실 데이터 엔지니어 채용 공고*
 ![라인 Ads 데이터 엔지니어 채용 공고](https://user-images.githubusercontent.com/13582777/167396158-dc0718f3-2c73-4470-9917-60b6c5a2b121.png)
+*라인 Ads 데이터 엔지니어 채용 공고*
 ![현대자동차 AIRS 모빌리티 서비스 데이터 개발자 채용 공고](https://user-images.githubusercontent.com/13582777/167397577-29cc9165-9602-4b77-b541-200358c42ae2.png)
+*현대자동차 AIRS 모빌리티 서비스 데이터 개발자 채용 공고*
 
 우리나라에서 대표적인 IT 대기업으로 취급되는 네이버, 카카오, 라인 그리고 현대자동차 AIRS의 채용 공고를 가져와봤는데요. 대략적으로 스타트업의 경우와 크게 다르진 않은 것 같습니다.
 
@@ -99,10 +108,15 @@ toc: true
 ### 데이터 엔지니어 in 미국
 마지막으로 미국 유망 기업들의 채용 공고를 살펴보는 시간을 갖도록 하겠습니다.
 ![Airbnb 데이터 엔지니어 채용 공고](https://user-images.githubusercontent.com/13582777/167398230-0afbc84a-b078-4827-8f18-255ca140c767.png)
+*Airbnb 데이터 엔지니어 채용 공고*
 ![Uber 빅데이터 엔지니어 채용 공고](https://user-images.githubusercontent.com/13582777/167398735-8448ee6c-756a-41ae-b0a1-0c1dfb8fe336.png)
+*Uber 빅데이터 엔지니어 채용 공고*
 ![Meta 데이터 엔지니어 채용 공고](https://user-images.githubusercontent.com/13582777/167398928-1d5917e4-e76c-413d-98d2-fc0a505cd3aa.png)
+*Meta 데이터 엔지니어 채용 공고*
 ![Netflix 데이터 플랫폼 엔지니어 채용 공고](https://user-images.githubusercontent.com/13582777/167399109-e90bbf6a-3aef-468a-8b21-ddceb2533d94.png)
+*Netflix 데이터 플랫폼 엔지니어 채용 공고*
 ![Google 클라우드 데이터 엔지니어 채용 공고](https://user-images.githubusercontent.com/13582777/167399436-26a1792d-8c6c-408b-a04a-98609c2ba2d8.png)
+*Google 클라우드 데이터 엔지니어 채용 공고*
 
 전반적으로 한국의 채용공고와 큰 차이점이 없다고 생각했습니다. 몇 가지 느낀 점은,
 - `large scale`, `high performance`, `exteremly efficient and reliable`, `high complex` 등 기술적 장벽에 대해 이야기하고 있는 공고가 많았습니다. 당연하게도 세계적인 기업이니까 그렇겠죠?
