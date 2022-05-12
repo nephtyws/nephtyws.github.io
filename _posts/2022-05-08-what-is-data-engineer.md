@@ -1,5 +1,5 @@
 ---
-title: "데이터 엔지니어란 무엇일까?"
+title: "데이터 엔지니어란 무엇인가?"
 date: 2022-05-10 02:15 +0900
 categories: Story
 toc: true
