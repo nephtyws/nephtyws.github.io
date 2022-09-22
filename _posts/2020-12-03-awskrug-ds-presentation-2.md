@@ -1,5 +1,5 @@
 ---
-title: "AWSKRUG Data Science 12월 발표 - Let the Airflow in AWS"
+title: "AWSKRUG Data Science 2020/12 발표 - Let the Airflow in AWS"
 date: 2020-12-03 21:35 +0900
 categories: Data
 toc: true

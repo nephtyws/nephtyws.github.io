@@ -1,5 +1,5 @@
 ---
-title: "AWSKRUG Data Science 5월 발표 - 데이터 엔지니어가 실무에서 맞닥뜨리는 문제들"
+title: "AWSKRUG Data Science 2020/05 발표 - 데이터 엔지니어가 실무에서 맞닥뜨리는 문제들"
 date: 2020-05-14 22:10 +0900
 categories: Data
 toc: true
